@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "hayato-ec"
+version = "0.1.0"
+description = ""
+authors = ["t-eeeeeee-n <t.eeee.n.nir@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+requests = "^2.32.3"
+fastapi = "^0.111.1"
+uvicorn = "^0.30.3"
+pydantic-settings = "^2.3.4"
+prisma = "^0.13.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
