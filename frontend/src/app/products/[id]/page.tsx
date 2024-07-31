@@ -8,6 +8,7 @@ const productData: Product[] = [
         price: 1000,
         description: "Delicious fresh apples.",
         imageUrl: "/images/product_maguro_1.png",
+        quantity: 1,
         details: "This product is sourced from the finest fish markets and frozen to preserve its quality.",
         shippingInfo: "Ships within 2-3 business days. Delivery charges may apply.",
         reviews: [
@@ -25,6 +26,7 @@ const productData: Product[] = [
         name: "大間産本マグロ(冷凍)腹上一番 200gサク",
         price: 2000,
         description: "Juicy organic tomatoes.",
+        quantity: 1,
         imageUrl: "/images/product_maguro_2.png",
         details: "These organic tomatoes are grown without pesticides and harvested at peak ripeness.",
         shippingInfo: "Ships within 2-3 business days. Delivery charges may apply.",
@@ -51,10 +53,7 @@ const Page = ({ params }: { params: Params }) => {
         return <p>Product not found</p>;
     }
 
-    // quantityプロパティを追加
-    const productWithQuantity = { ...product, quantity: 1 };
-
-    return <Client product={productWithQuantity} />;
+    return <Client product={product} />;
 }
 
 export default Page;
