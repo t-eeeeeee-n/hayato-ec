@@ -1,5 +1,6 @@
+// src/app/products/page.tsx
 import Client from './client';
-import { Product } from '@/types';
+import { Product, Category } from '@/types';
 
 const products: Product[] = [
     {
@@ -44,18 +45,14 @@ const products: Product[] = [
     },
 ];
 
-interface Params {
-    id: string;
-}
+const categories: Category[] = [
+    { id: 1, name: "鮪", imageUrl: "/images/category_maguro.png" },
+    { id: 2, name: "雲丹", imageUrl: "/images/category_uni.png" },
+    // 他のカテゴリデータを追加
+];
 
-const Page = ({ params }: { params: Params }) => {
-    const product = products.find((p) => p.id === Number(params.id));
-
-    if (!product) {
-        return <p>Product not found</p>;
-    }
-
-    return <Client product={product} />;
-}
+const Page = () => {
+    return <Client products={products} categories={categories} />;
+};
 
 export default Page;

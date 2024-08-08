@@ -1,13 +1,14 @@
 "use client"
 
 import React, { createContext, useState, useContext, ReactNode } from 'react';
-import {Product} from "@/types";
+import { Product } from "@/types";
 
 interface CartContextType {
     cart: Product[];
     addToCart: (product: Product) => void;
     removeFromCart: (id: number) => void;
-    clearCart: () => void; // clearCart 関数を追加
+    clearCart: () => void;
+    getCartCount: () => number;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -35,8 +36,12 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         setCart([]);
     };
 
+    const getCartCount = () => {
+        return cart.reduce((acc, item) => acc + item.quantity, 0);
+    };
+
     return (
-        <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart }}>
+        <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart, getCartCount }}>
             {children}
         </CartContext.Provider>
     );

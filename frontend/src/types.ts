@@ -15,6 +15,7 @@ export interface Product {
     shippingInfo: string;
     reviews: Review[];
     thumbnails: string[];
+    categoryId: number;
 }
 
 export interface Category {

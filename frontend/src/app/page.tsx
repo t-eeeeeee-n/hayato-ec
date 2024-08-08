@@ -8,9 +8,9 @@ const products: Product[] = [
     price: 1000,
     imageUrl: "/images/product_maguro_1.png",
     quantity: 1,
-    description: "Delicious fresh apples.",
-    details: "This product is sourced from the finest fish markets and frozen to preserve its quality.",
-    shippingInfo: "Ships within 2-3 business days. Delivery charges may apply.",
+    description: "最高級のマグロ",
+    details: "冷凍保存可能",
+    shippingInfo: "2-3日で発送",
     reviews: [
       { user: "John Doe", comment: "Amazing quality, very fresh!", rating: 5 },
       { user: "Jane Smith", comment: "Great taste but a bit pricey.", rating: 4 },
@@ -19,7 +19,8 @@ const products: Product[] = [
       "/images/thumb1.png",
       "/images/thumb2.png",
       "/images/thumb3.png"
-    ]
+    ],
+    categoryId: 1
   },
   {
     id: 2,
@@ -27,9 +28,9 @@ const products: Product[] = [
     price: 2000,
     imageUrl: "/images/product_maguro_2.png",
     quantity: 1,
-    description: "Juicy organic tomatoes.",
-    details: "These organic tomatoes are grown without pesticides and harvested at peak ripeness.",
-    shippingInfo: "Ships within 2-3 business days. Delivery charges may apply.",
+    description: "とてもおいしいマグロ",
+    details: "新鮮な味わい",
+    shippingInfo: "2-3日で発送",
     reviews: [
       { user: "Alice Brown", comment: "Very juicy and tasty!", rating: 5 },
       { user: "Bob Johnson", comment: "Not as fresh as I expected.", rating: 3 },
@@ -38,7 +39,8 @@ const products: Product[] = [
       "/images/thumb1.png",
       "/images/thumb2.png",
       "/images/thumb3.png"
-    ]
+    ],
+    categoryId: 1
   },
 ];
 
